@@ -34,3 +34,9 @@ class Cart:
             for dvd in self.items:
                 print(f"- {dvd.title} [{dvd.category}]: {dvd.cost} $")
             print(f"Total cost: {self.total_cost():.2f} $")
+
+    def total_cost_with_discount(self, percent):
+        if not (0 <= percent <= 100):
+            raise ValueError("Percent must be between 0 and 100")
+        total = sum(item.cost for item in self.items)
+        return total * (1 - percent / 100)
