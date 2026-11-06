@@ -2,7 +2,7 @@ MAX_NUMBERS_ORDERED = 20
 
 
 class Cart:
-    """Giỏ hàng chứa tối đa MAX_NUMBERS_ORDERED đĩa DVD (k lỗi)."""
+    """Giỏ hàng chứa tối đa MAX_NUMBERS_ORDERED đĩa DVD (kk lỗi)."""
 
     def __init__(self):
         self.items = []
