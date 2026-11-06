@@ -26,5 +26,13 @@ class TestCartLimit(unittest.TestCase):
         with self.assertRaises(ValueError):
             cart.total_cost_with_discount(150)
 
+    def test_sort_by_title(self):
+        # Thêm các đĩa vào giỏ và kiểm tra thứ tự tiêu đề sau khi gọi sort_by_title()
+        pass
+
+    def test_sort_by_cost(self):
+        # Kiểm tra thứ tự giá sau khi gọi sort_by_cost()
+        pass
+
 if __name__ == '__main__':
     unittest.main()
