@@ -14,5 +14,17 @@ class TestCartLimit(unittest.TestCase):
         dvd_extra = DigitalVideoDisc("Extra Title", "Category", 10.0)
         self.assertFalse(cart.add_dvd(dvd_extra))
 
+    def test_discount_calculation(self):
+        cart = Cart()
+        dvd = DigitalVideoDisc("Test DVD", "Category", 100.0)
+        dvd.cost = 100.0
+        cart.add_dvd(dvd)
+        # Kiểm tra giảm giá 20% -> phải còn 80.0
+        self.assertEqual(cart.total_cost_with_discount(20), 80.0)
+        
+        # Kiểm tra phần trăm không hợp lệ phải ném ra ValueError
+        with self.assertRaises(ValueError):
+            cart.total_cost_with_discount(150)
+
 if __name__ == '__main__':
     unittest.main()
