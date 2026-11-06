@@ -6,4 +6,6 @@
 ### Fixed
 - Giỏ hàng nhận đĩa thứ 21 (#6)
 
-1.0.1
+## [Unreleased]
+### Added
+- Cart.sort_by_title(), Cart.sort_by_cost() cho giỏ hàng
